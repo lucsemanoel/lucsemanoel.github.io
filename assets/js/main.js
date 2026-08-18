@@ -1,24 +1,60 @@
 /*===== EXIBIR MENU =====*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+// Controla abertura/fechamento do menu mobile: alterna o ícone (menu <-> x),
+// escurece o fundo, trava o scroll da página e fecha ao clicar fora ou Esc —
+// evita o efeito "bugado" de menu sobrepondo conteúdo sem dar feedback claro.
+const toggle = document.getElementById("nav-toggle");
+const toggleIcon = document.getElementById("nav-toggle-icon");
+const navMenu = document.getElementById("nav-menu");
+const navOverlay = document.getElementById("nav-overlay");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-  }
-};
-showMenu("nav-toggle", "nav-menu");
+function openMenu() {
+  navMenu.classList.add("show");
+  navOverlay.classList.add("show");
+  document.body.classList.add("nav-open");
+  toggle.setAttribute("aria-expanded", "true");
+  toggle.setAttribute("aria-label", "Fechar menu");
+  toggleIcon.classList.replace("bx-menu", "bx-x");
+}
+
+function closeMenu() {
+  navMenu.classList.remove("show");
+  navOverlay.classList.remove("show");
+  document.body.classList.remove("nav-open");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Abrir menu");
+  toggleIcon.classList.replace("bx-x", "bx-menu");
+}
+
+function toggleMenu() {
+  const isOpen = navMenu.classList.contains("show");
+  isOpen ? closeMenu() : openMenu();
+}
+
+if (toggle && navMenu && navOverlay) {
+  toggle.addEventListener("click", toggleMenu);
+
+  // Acessibilidade: permite abrir/fechar com teclado (Enter/Espaço)
+  toggle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Fecha ao clicar no fundo escurecido
+  navOverlay.addEventListener("click", closeMenu);
+
+  // Fecha ao pressionar Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navMenu.classList.contains("show")) {
+      closeMenu();
+    }
+  });
+}
 
 /*==================== FECHAR MENU MOBILE AO CLICAR EM UM LINK ====================*/
 const navLink = document.querySelectorAll(".nav__link");
-
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.remove("show");
-}
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
 /*==================== LINK ATIVO CONFORME A SEÇÃO VISÍVEL ====================*/
 // Usa IntersectionObserver em vez de um listener de "scroll" — evita recalcular

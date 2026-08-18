@@ -48,11 +48,22 @@
           </ul>
         </div>
 
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
+        <div
+          class="nav__toggle"
+          id="nav-toggle"
+          role="button"
+          tabindex="0"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <i class="bx bx-menu" id="nav-toggle-icon"></i>
         </div>
       </nav>
     </header>
+
+    <!-- Fundo escurecido atrás do menu mobile aberto -->
+    <div class="nav__overlay" id="nav-overlay"></div>
 
     <main class="l-main">
       <!--===== INÍCIO =====-->
