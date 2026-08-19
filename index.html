@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <title>Lucas Emanoel - Portfólio</title>
+    <title>Lucas Emanoel</title>
   </head>
   <body>
     <!--===== CABEÇALHO =====-->
@@ -35,6 +35,9 @@
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">Sobre</a>
+            </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">Experiência</a>
             </li>
             <li class="nav__item">
               <a href="#skills" class="nav__link">Skills</a>
@@ -103,6 +106,13 @@
           >
             <i class="bx bxl-whatsapp"></i>
           </a>
+          <a
+            href="mailto:lucasedasilva30@gmail.com"
+            class="home__social-icon"
+            aria-label="Enviar e-mail"
+          >
+            <i class="bx bx-envelope"></i>
+          </a>
         </div>
 
         <div class="home__img">
@@ -162,6 +172,59 @@
         </div>
       </section>
 
+      <!--===== EXPERIÊNCIA =====-->
+      <section class="experience section" id="experience">
+        <h2 class="section-title">Experiência</h2>
+
+        <div class="experience__container bd-grid">
+          <div class="experience__item">
+            <div class="experience__header">
+              <h3 class="experience__role">
+                Desenvolvedor Backend (Freelancer)
+              </h3>
+              <span class="experience__period">2026</span>
+            </div>
+            <p class="experience__company">Mac Madeiras · Canguaretama, RN</p>
+            <p class="experience__desc">
+              Desenvolvi o MacNF, sistema de gestão de notas fiscais para uma
+              rede de 3 lojas de materiais de construção, em produção com
+              usuários reais e em processo de formalização como serviço pago.
+            </p>
+            <ul class="experience__list">
+              <li>
+                API REST com Django REST Framework e autenticação por token
+              </li>
+              <li>
+                Controle de acesso por perfis (estoquista, fiscal, compras)
+              </li>
+              <li>
+                Armazenamento seguro de PDFs no Cloudflare R2 com URLs assinadas
+              </li>
+              <li>Deploy na Railway com PostgreSQL em produção</li>
+              <li>
+                Diagnóstico e correção de falhas em produção, análise de logs e
+                suporte técnico aos usuários
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience__item">
+            <div class="experience__header">
+              <h3 class="experience__role">
+                Desenvolvimento Web e Suporte Técnico
+              </h3>
+              <span class="experience__period">2023 - atual</span>
+            </div>
+            <p class="experience__company">Freelancer · Canguaretama, RN</p>
+            <p class="experience__desc">
+              Desenvolvimento de sistemas web e manutenção de computadores,
+              prestando suporte técnico, instalação de softwares e diagnóstico
+              de problemas.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!--===== HABILIDADES =====-->
       <section class="skills section" id="skills">
         <h2 class="section-title">Skills</h2>
@@ -179,8 +242,10 @@
                 <i class="bx bxl-python skills__icon"></i>
                 <span class="skills__name">Python · Django · DRF</span>
               </div>
-              <div class="skills__bar skills__backend"></div>
-              <div><span class="skills__percentage">90%</span></div>
+              <p class="skills__detail">
+                APIs REST, autenticação por token/JWT, ORM e migrations, deploy
+                em produção
+              </p>
             </div>
 
             <div class="skills__data">
@@ -188,8 +253,10 @@
                 <i class="bx bx-data skills__icon"></i>
                 <span class="skills__name">PostgreSQL / SQL</span>
               </div>
-              <div class="skills__bar skills__db"></div>
-              <div><span class="skills__percentage">80%</span></div>
+              <p class="skills__detail">
+                Modelagem relacional, queries e migrations aplicadas em sistema
+                real em produção
+              </p>
             </div>
 
             <div class="skills__data">
@@ -197,8 +264,10 @@
                 <i class="bx bxl-javascript skills__icon"></i>
                 <span class="skills__name">JavaScript / TypeScript</span>
               </div>
-              <div class="skills__bar skills__jsts"></div>
-              <div><span class="skills__percentage">75%</span></div>
+              <p class="skills__detail">
+                Consumo de APIs REST, interfaces interativas e apps mobile com
+                React Native
+              </p>
             </div>
 
             <div class="skills__data">
@@ -206,8 +275,10 @@
                 <i class="bx bxl-git skills__icon"></i>
                 <span class="skills__name">Git / GitHub</span>
               </div>
-              <div class="skills__bar skills__git"></div>
-              <div><span class="skills__percentage">85%</span></div>
+              <p class="skills__detail">
+                Versionamento e fluxo de branches em projetos profissionais e
+                acadêmicos
+              </p>
             </div>
           </div>
 
@@ -236,15 +307,19 @@
             class="work__img"
             data-images="assets/img/macnf/login.png,assets/img/macnf/notas-list.png,assets/img/macnf/nota-create.png,assets/img/macnf/relatorio.png"
           >
+            <span class="work__badge">Em produção</span>
             <img
               src="assets/img/work1.jpg"
               alt="MacNF - Sistema de gestão de notas fiscais em produção"
               loading="lazy"
               decoding="async"
             />
+            <p class="work__caption">
+              Usado por usuários reais em múltiplas lojas · virando serviço pago
+            </p>
           </a>
 
-          <!-- 2. To-Do List - JWT + REST API, keywords de vaga -->
+          <!-- 2. To-Do List - CRUD de tarefas + auth por sessão -->
           <a
             href="https://github.com/luccaszzzz/to_do_list"
             target="_blank"
@@ -254,10 +329,14 @@
           >
             <img
               src="assets/img/work2.jpg"
-              alt="To-Do List - API REST com autenticação JWT"
+              alt="To-Do List - Gerenciamento de tarefas com Django"
               loading="lazy"
               decoding="async"
             />
+            <p class="work__caption">
+              CRUD completo de tarefas com autenticação por sessão, filtros e
+              gerenciamento de perfil de usuário
+            </p>
           </a>
 
           <!-- 3. EngList - fullstack Django completo -->
@@ -274,6 +353,10 @@
               loading="lazy"
               decoding="async"
             />
+            <p class="work__caption">
+              Board Kanban para gestão de obras, com upload de imagens e API
+              REST paralela à interface web
+            </p>
           </a>
 
           <!-- 4. Atuar Engenharia - frontend/fullstack -->
@@ -284,12 +367,17 @@
             class="work__img"
             data-images="assets/img/atuar/tela1.png,assets/img/atuar/tela2.png,assets/img/atuar/tela3.png,assets/img/atuar/tela4.png"
           >
+            <span class="work__badge work__badge--muted">Arquivado</span>
             <img
               src="assets/img/work4.jpg"
               alt="Atuar Engenharia - Landing page responsiva"
               loading="lazy"
               decoding="async"
             />
+            <p class="work__caption">
+              Landing page institucional freelance com integração ao WhatsApp e
+              feed do Instagram
+            </p>
           </a>
 
           <!-- 5. Smart Reservoir - mobile + QA -->
@@ -299,12 +387,16 @@
             rel="noopener noreferrer"
             class="work__img"
           >
+            <span class="work__badge">TCC · nota máxima</span>
             <img
               src="assets/img/work5.jpg"
               alt="Smart Reservoir - App mobile React Native"
               loading="lazy"
               decoding="async"
             />
+            <p class="work__caption">
+              61 casos de teste em 14 suítes automatizadas
+            </p>
           </a>
 
           <!-- 6. Slot reservado para próximo projeto -->
@@ -347,7 +439,6 @@
 
     <!--===== RODAPÉ =====-->
     <footer class="footer">
-      <p class="footer__title">Lucas Emanoel</p>
       <div class="footer__social">
         <a
           href="https://linkedin.com/in/lucas-emanoel-38a440238"
@@ -372,6 +463,13 @@
           rel="noopener noreferrer"
         >
           <i class="bx bxl-whatsapp"></i>
+        </a>
+        <a
+          href="mailto:lucasedasilva30@gmail.com"
+          class="footer__icon"
+          aria-label="Enviar e-mail"
+        >
+          <i class="bx bx-envelope"></i>
         </a>
       </div>
       <p class="footer__copy">
