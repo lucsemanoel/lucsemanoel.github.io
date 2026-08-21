@@ -277,9 +277,22 @@ body.nav-open {
 
   &__title-role {
     display: inline-block;
-    transition: opacity 0.35s ease;
+    position: relative;
 
-    &.fade {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 0.9em;
+      margin-left: 0.15em;
+      background-color: var(--first-color-alt);
+      vertical-align: -0.1em;
+      animation: cursor-blink 0.8s steps(1) infinite;
+    }
+  }
+
+  @keyframes cursor-blink {
+    50% {
       opacity: 0;
     }
   }
@@ -488,23 +501,45 @@ body.nav-open {
 
   &__img {
     position: relative;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     overflow: hidden;
     border: 1px solid var(--border-color);
-    display: block;
     transition: border-color 0.25s;
 
     &:hover {
       border-color: var(--first-color);
     }
+  }
+
+  &__thumb {
+    position: relative;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: var(--card-color);
 
     img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: 0.6s;
+
       &:hover {
         transform: scale(1.1);
       }
     }
+  }
+
+  // Prints de celular (verticais): mostra a tela inteira sem cortar nem
+  // esticar, com uma margem em volta, em vez de forçar no recorte 4:3
+  // horizontal usado pelos prints de desktop.
+  &__img--portrait &__thumb img {
+    object-fit: contain;
+    padding: 1.25rem;
+    box-sizing: border-box;
   }
 
   &__badge {
@@ -529,6 +564,9 @@ body.nav-open {
   }
 
   &__caption {
+    flex: 1;
+    display: flex;
+    align-items: center;
     padding: 0.6rem 0.9rem;
     font-size: var(--smaller-font-size);
     color: var(--text-dim);
