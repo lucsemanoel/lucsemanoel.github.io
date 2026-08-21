@@ -83,20 +83,46 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-/*==================== ROTAÇÃO DO CARGO (ROLE) ====================*/
-const roles = ["Dev Backend Jr", "Dev Fullstack Jr"];
-let roleIndex = 0;
-const roleEl = document.querySelector(".home__title-role");
+/*==================== EFEITO DE DIGITAÇÃO (CARGO) ====================*/
+const ROLE_TEXT = "Dev Fullstack";
+const TYPE_SPEED = 90;
+const DELETE_SPEED = 45;
+const PAUSE_AFTER_TYPE = 1800;
+const PAUSE_AFTER_DELETE = 500;
 
-if (roleEl) {
-  setInterval(() => {
-    roleEl.classList.add("fade");
-    setTimeout(() => {
-      roleIndex = (roleIndex + 1) % roles.length;
-      roleEl.textContent = roles[roleIndex];
-      roleEl.classList.remove("fade");
-    }, 350);
-  }, 3000);
+const roleEl = document.querySelector(".home__title-role");
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
+if (roleEl && !prefersReducedMotion) {
+  roleEl.textContent = "";
+
+  function typeRole() {
+    let i = 0;
+    const typing = setInterval(() => {
+      i++;
+      roleEl.textContent = ROLE_TEXT.slice(0, i);
+      if (i === ROLE_TEXT.length) {
+        clearInterval(typing);
+        setTimeout(deleteRole, PAUSE_AFTER_TYPE);
+      }
+    }, TYPE_SPEED);
+  }
+
+  function deleteRole() {
+    let i = ROLE_TEXT.length;
+    const deleting = setInterval(() => {
+      i--;
+      roleEl.textContent = ROLE_TEXT.slice(0, i);
+      if (i === 0) {
+        clearInterval(deleting);
+        setTimeout(typeRole, PAUSE_AFTER_DELETE);
+      }
+    }, DELETE_SPEED);
+  }
+
+  typeRole();
 }
 
 /*==================== FALLBACK PARA IMAGEM QUEBRADA ====================*/

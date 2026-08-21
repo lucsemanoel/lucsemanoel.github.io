@@ -252,10 +252,22 @@ body.nav-open {
 }
 .home__title-role {
   display: inline-block;
-  transition: opacity 0.35s ease;
+  position: relative;
 }
-.home__title-role.fade {
-  opacity: 0;
+.home__title-role::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  margin-left: 0.15em;
+  background-color: var(--first-color-alt);
+  vertical-align: -0.1em;
+  animation: cursor-blink 0.8s steps(1) infinite;
+}
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 .home__social {
   display: flex;
