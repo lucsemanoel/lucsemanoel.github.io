@@ -122,9 +122,23 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: rgba(8, 8, 8, 0.96);
-  backdrop-filter: blur(8px);
   box-shadow: 0 1px 0 var(--border-color);
+
+  // O blur/fundo fica num pseudo-elemento em vez de direto no .l-header:
+  // backdrop-filter no próprio .l-header criaria um "containing block" para
+  // filhos position:fixed (como o #nav-menu), confinando o menu mobile à
+  // altura do cabeçalho em vez do viewport inteiro.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(8, 8, 8, 0.96);
+    backdrop-filter: blur(8px);
+  }
 }
 
 /*===== NAVEGAÇÃO =====*/
