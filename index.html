@@ -25,30 +25,41 @@
     <header class="l-header">
       <nav class="nav bd-grid">
         <div>
-          <a href="#" class="nav__logo">Lucas Emanoel da Silva Freitas</a>
+          <a href="#" class="nav__logo">Lucas Emanoel</a>
         </div>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+              <a href="#home" class="nav__link active-link" data-i18n="nav.home">Home</a>
             </li>
             <li class="nav__item">
-              <a href="#about" class="nav__link">Sobre</a>
+              <a href="#about" class="nav__link" data-i18n="nav.about">Sobre</a>
             </li>
             <li class="nav__item">
-              <a href="#experience" class="nav__link">Experiência</a>
+              <a href="#experience" class="nav__link" data-i18n="nav.experience">Experiência</a>
             </li>
             <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
+              <a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
             </li>
             <li class="nav__item">
-              <a href="#work" class="nav__link">Projetos</a>
+              <a href="#work" class="nav__link" data-i18n="nav.work">Projetos</a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contato</a>
+              <a href="#contact" class="nav__link" data-i18n="nav.contact">Contato</a>
             </li>
           </ul>
+        </div>
+
+        <div class="nav__settings">
+          <div class="language-switch" role="group" aria-label="Idioma">
+            <button class="language-switch__button is-active" type="button" data-language="pt-BR" aria-pressed="true">PT</button>
+            <span class="language-switch__divider" aria-hidden="true">|</span>
+            <button class="language-switch__button" type="button" data-language="en" aria-pressed="false">EN</button>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Mudar para tema claro" title="Mudar para tema claro">
+            <i class="bx bx-sun" id="theme-toggle-icon" aria-hidden="true"></i>
+          </button>
         </div>
 
         <div
@@ -73,12 +84,12 @@
       <section class="home bd-grid" id="home">
         <div class="home__data">
           <h1 class="home__title">
-            Olá,<br />
-            sou <span class="home__title-color">Lucas Emanoel</span><br />
+            <span data-i18n="home.greeting">Olá,</span><br />
+            <span data-i18n="home.intro">sou </span><span class="home__title-color">Lucas Emanoel</span><br />
             <span class="home__title-role">Dev Fullstack</span>
           </h1>
 
-          <a href="#contact" class="button">Contato</a>
+          <a href="#contact" class="button" data-i18n="nav.contact">Contato</a>
         </div>
 
         <div class="home__social">
@@ -110,6 +121,7 @@
             href="mailto:lucasedasilva30@gmail.com"
             class="home__social-icon"
             aria-label="Enviar e-mail"
+            data-i18n-aria-label="contact.emailLabel"
           >
             <i class="bx bx-envelope"></i>
           </a>
@@ -144,7 +156,7 @@
 
       <!--===== SOBRE =====-->
       <section class="about section" id="about">
-        <h2 class="section-title">Sobre</h2>
+        <h2 class="section-title" data-i18n="nav.about">Sobre</h2>
 
         <div class="about__container bd-grid">
           <div class="about__img">
@@ -157,8 +169,8 @@
           </div>
 
           <div>
-            <h2 class="about__subtitle">Eu sou Lucas</h2>
-            <p class="about__text">
+            <h2 class="about__subtitle" data-i18n="about.subtitle">Eu sou Lucas</h2>
+            <p class="about__text" data-i18n="about.text">
               Tecnólogo em Sistemas para Internet pelo IFRN, com foco em
               desenvolvimento backend e fullstack. Desenvolvo APIs REST com
               Django e Django REST Framework, banco de dados relacional com
@@ -174,49 +186,48 @@
 
       <!--===== EXPERIÊNCIA =====-->
       <section class="experience section" id="experience">
-        <h2 class="section-title">Experiência</h2>
+        <h2 class="section-title" data-i18n="nav.experience">Experiência</h2>
 
         <div class="experience__container bd-grid">
           <div class="experience__item">
             <div class="experience__header">
-              <h3 class="experience__role">
+              <h3 class="experience__role" data-i18n="experience.backendRole">
                 Desenvolvedor Backend (Freelancer)
               </h3>
               <span class="experience__period">2026</span>
             </div>
-            <p class="experience__company">Mac Madeiras · Canguaretama, RN</p>
-            <p class="experience__desc">
+            <p class="experience__company" data-i18n="experience.company">Mac Madeiras · Canguaretama, RN</p>
+            <p class="experience__desc" data-i18n="experience.backendDescription">
               Desenvolvi o MacNF, sistema de gestão de notas fiscais para uma
               rede de 3 lojas de materiais de construção, em produção com
               usuários reais e em processo de formalização como serviço pago.
             </p>
             <ul class="experience__list">
               <li>
-                API REST com Django REST Framework e autenticação por token
+                <span data-i18n="experience.item1">API REST com Django REST Framework e autenticação por token</span>
               </li>
               <li>
-                Controle de acesso por perfis (estoquista, fiscal, compras)
+                <span data-i18n="experience.item2">Controle de acesso por perfis (estoquista, fiscal, compras)</span>
               </li>
               <li>
-                Armazenamento seguro de PDFs no Cloudflare R2 com URLs assinadas
+                <span data-i18n="experience.item3">Armazenamento seguro de PDFs no Cloudflare R2 com URLs assinadas</span>
               </li>
-              <li>Deploy na Railway com PostgreSQL em produção</li>
+              <li data-i18n="experience.item4">Deploy na Railway com PostgreSQL em produção</li>
               <li>
-                Diagnóstico e correção de falhas em produção, análise de logs e
-                suporte técnico aos usuários
+                <span data-i18n="experience.item5">Diagnóstico e correção de falhas em produção, análise de logs e suporte técnico aos usuários</span>
               </li>
             </ul>
           </div>
 
           <div class="experience__item">
             <div class="experience__header">
-              <h3 class="experience__role">
+              <h3 class="experience__role" data-i18n="experience.webRole">
                 Desenvolvimento Web e Suporte Técnico
               </h3>
-              <span class="experience__period">2023 - atual</span>
+              <span class="experience__period" data-i18n="experience.currentPeriod">2023 - atual</span>
             </div>
-            <p class="experience__company">Freelancer · Canguaretama, RN</p>
-            <p class="experience__desc">
+            <p class="experience__company" data-i18n="experience.freelancer">Freelancer · Canguaretama, RN</p>
+            <p class="experience__desc" data-i18n="experience.webDescription">
               Desenvolvimento de sistemas web e manutenção de computadores,
               prestando suporte técnico, instalação de softwares e diagnóstico
               de problemas.
@@ -227,12 +238,12 @@
 
       <!--===== HABILIDADES =====-->
       <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title" data-i18n="nav.skills">Skills</h2>
 
         <div class="skills__container bd-grid">
           <div>
-            <h2 class="skills__subtitle">Habilidades Técnicas</h2>
-            <p class="skills__text">
+            <h2 class="skills__subtitle" data-i18n="skills.subtitle">Habilidades Técnicas</h2>
+            <p class="skills__text" data-i18n="skills.intro">
               Atuação fullstack: do modelo de dados e das APIs REST em Django ao
               frontend que consome essas APIs, passando por apps mobile e testes
               automatizados.
@@ -243,7 +254,7 @@
                 <i class="bx bxl-python skills__icon"></i>
                 <span class="skills__name">Python · Django · DRF</span>
               </div>
-              <p class="skills__detail">
+              <p class="skills__detail" data-i18n="skills.python">
                 APIs REST, autenticação por token/JWT, ORM e migrations, deploy
                 em produção
               </p>
@@ -254,7 +265,7 @@
                 <i class="bx bxl-html5 skills__icon"></i>
                 <span class="skills__name">HTML · CSS · JavaScript</span>
               </div>
-              <p class="skills__detail">
+              <p class="skills__detail" data-i18n="skills.frontend">
                 Interfaces responsivas integradas ao backend, do layout ao
                 consumo de API REST
               </p>
@@ -265,7 +276,7 @@
                 <i class="bx bx-data skills__icon"></i>
                 <span class="skills__name">PostgreSQL / SQL</span>
               </div>
-              <p class="skills__detail">
+              <p class="skills__detail" data-i18n="skills.database">
                 Modelagem relacional, queries e migrations aplicadas em sistema
                 real em produção
               </p>
@@ -276,7 +287,7 @@
                 <i class="bx bxl-react skills__icon"></i>
                 <span class="skills__name">React Native · TypeScript</span>
               </div>
-              <p class="skills__detail">
+              <p class="skills__detail" data-i18n="skills.mobile">
                 Apps mobile e testes automatizados com Jest e React Native
                 Testing Library
               </p>
@@ -287,7 +298,7 @@
                 <i class="bx bxl-git skills__icon"></i>
                 <span class="skills__name">Git / GitHub</span>
               </div>
-              <p class="skills__detail">
+              <p class="skills__detail" data-i18n="skills.git">
                 Versionamento e fluxo de branches em projetos profissionais e
                 acadêmicos
               </p>
@@ -308,7 +319,7 @@
 
       <!--===== PROJETOS =====-->
       <section class="work section" id="work">
-        <h2 class="section-title">Projetos</h2>
+        <h2 class="section-title" data-i18n="nav.work">Projetos</h2>
 
         <div class="work__container bd-grid">
           <!-- 1. MacNF - produção real, prioridade máxima -->
@@ -319,16 +330,17 @@
             class="work__img"
             data-images="assets/img/macnf/login.png,assets/img/macnf/notas-list.png,assets/img/macnf/nota-create.png,assets/img/macnf/relatorio.png"
           >
-            <span class="work__badge">Em produção</span>
+            <span class="work__badge" data-i18n="work.production">Em produção</span>
             <div class="work__thumb">
               <img
                 src="assets/img/work1.jpg"
                 alt="MacNF - Sistema de gestão de notas fiscais em produção"
+                data-i18n-alt="work.macnfAlt"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <p class="work__caption">
+            <p class="work__caption" data-i18n="work.macnfCaption">
               Usado por usuários reais em múltiplas lojas · virando serviço pago
             </p>
           </a>
@@ -345,11 +357,12 @@
               <img
                 src="assets/img/work2.jpg"
                 alt="To-Do List - Gerenciamento de tarefas com Django"
+                data-i18n-alt="work.todoAlt"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <p class="work__caption">
+            <p class="work__caption" data-i18n="work.todoCaption">
               CRUD completo de tarefas com autenticação por sessão, filtros e
               gerenciamento de perfil de usuário
             </p>
@@ -367,11 +380,12 @@
               <img
                 src="assets/img/diario/Captura de tela 2026-07-26 225816.png"
                 alt="EngList - Gerenciamento de obras com Django"
+                data-i18n-alt="work.englistAlt"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <p class="work__caption">
+            <p class="work__caption" data-i18n="work.englistCaption">
               Board Kanban para gestão de obras, com upload de imagens e API
               REST paralela à interface web
             </p>
@@ -385,16 +399,17 @@
             class="work__img"
             data-images="assets/img/atuar/tela1.png,assets/img/atuar/tela2.png,assets/img/atuar/tela3.png,assets/img/atuar/tela4.png"
           >
-            <span class="work__badge work__badge--muted">Arquivado</span>
+            <span class="work__badge work__badge--muted" data-i18n="work.archived">Arquivado</span>
             <div class="work__thumb">
               <img
                 src="assets/img/work4.jpg"
                 alt="Atuar Engenharia - Landing page responsiva"
+                data-i18n-alt="work.atuarAlt"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <p class="work__caption">
+            <p class="work__caption" data-i18n="work.atuarCaption">
               Landing page institucional freelance com integração ao WhatsApp e
               feed do Instagram
             </p>
@@ -408,16 +423,17 @@
             class="work__img work__img--portrait"
             data-images="assets/img/smart/login.jpg,assets/img/smart/home.jpg,assets/img/smart/alerts.jpg,assets/img/smart/profile.jpg,assets/img/smart/about.jpg,assets/img/smart/support.jpg"
           >
-            <span class="work__badge">TCC · nota máxima</span>
+            <span class="work__badge" data-i18n="work.award">TCC · nota máxima</span>
             <div class="work__thumb">
               <img
                 src="assets/img/work5.jpg"
                 alt="Smart Reservoir - App mobile React Native"
+                data-i18n-alt="work.smartAlt"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <p class="work__caption">
+            <p class="work__caption" data-i18n="work.smartCaption">
               61 casos de teste em 14 suítes automatizadas
             </p>
           </a>
@@ -431,7 +447,7 @@
           >
             <div class="work__soon">
               <i class="bx bx-code-alt"></i>
-              <span>Em breve</span>
+              <span data-i18n="work.soon">Em breve</span>
             </div>
           </a>
         </div>
@@ -439,20 +455,22 @@
 
       <!--===== CONTATO =====-->
       <section class="contact section" id="contact">
-        <h2 class="section-title">Contato</h2>
+        <h2 class="section-title" data-i18n="nav.contact">Contato</h2>
 
         <div class="contact__container bd-grid">
           <form action="" class="contact__form">
-            <input type="text" placeholder="Nome" class="contact__input" />
-            <input type="email" placeholder="E-mail" class="contact__input" />
+            <input type="text" placeholder="Nome" data-i18n-placeholder="contact.name" class="contact__input" />
+            <input type="email" placeholder="E-mail" data-i18n-placeholder="contact.email" class="contact__input" />
             <textarea
               rows="10"
               placeholder="Mensagem"
+              data-i18n-placeholder="contact.message"
               class="contact__input"
             ></textarea>
             <input
               type="button"
               value="Enviar"
+              data-i18n-value="contact.send"
               class="contact__button button"
             />
           </form>
@@ -491,13 +509,13 @@
           href="mailto:lucasedasilva30@gmail.com"
           class="footer__icon"
           aria-label="Enviar e-mail"
+          data-i18n-aria-label="contact.emailLabel"
         >
           <i class="bx bx-envelope"></i>
         </a>
       </div>
       <p class="footer__copy">
-        &#169; 2026 Lucas Emanoel da Silva Freitas. Todos os direitos
-        reservados.
+        <span data-i18n="footer.copyright">&#169; 2026 Lucas Emanoel da Silva Freitas. Todos os direitos reservados.</span>
       </p>
     </footer>
 
