@@ -297,10 +297,6 @@ document.querySelectorAll(".work__img[data-images]").forEach((card) => {
   let index = 0;
   let interval = null;
 
-  images.forEach((src) => {
-    new Image().src = src;
-  });
-
   // Garante que a imagem exibida ao carregar a página seja sempre uma das
   // imagens reais do data-images, em vez de depender do src fixo no HTML
   // (que pode ficar desatualizado ou apontar pra um arquivo inexistente).
