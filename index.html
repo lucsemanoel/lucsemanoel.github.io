@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
     <!-- =====BOX ICONS===== -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
@@ -31,33 +33,63 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link" data-i18n="nav.home">Home</a>
+              <a href="#home" class="nav__link active-link" data-i18n="nav.home"
+                >Home</a
+              >
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link" data-i18n="nav.about">Sobre</a>
             </li>
             <li class="nav__item">
-              <a href="#experience" class="nav__link" data-i18n="nav.experience">Experiência</a>
+              <a href="#experience" class="nav__link" data-i18n="nav.experience"
+                >Experiência</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
+              <a href="#skills" class="nav__link" data-i18n="nav.skills"
+                >Skills</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#work" class="nav__link" data-i18n="nav.work">Projetos</a>
+              <a href="#work" class="nav__link" data-i18n="nav.work"
+                >Projetos</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link" data-i18n="nav.contact">Contato</a>
+              <a href="#contact" class="nav__link" data-i18n="nav.contact"
+                >Contato</a
+              >
             </li>
           </ul>
         </div>
 
         <div class="nav__settings">
           <div class="language-switch" role="group" aria-label="Idioma">
-            <button class="language-switch__button is-active" type="button" data-language="pt-BR" aria-pressed="true">PT</button>
+            <button
+              class="language-switch__button is-active"
+              type="button"
+              data-language="pt-BR"
+              aria-pressed="true"
+            >
+              PT
+            </button>
             <span class="language-switch__divider" aria-hidden="true">|</span>
-            <button class="language-switch__button" type="button" data-language="en" aria-pressed="false">EN</button>
+            <button
+              class="language-switch__button"
+              type="button"
+              data-language="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
           </div>
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Mudar para tema claro" title="Mudar para tema claro">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Mudar para tema claro"
+            title="Mudar para tema claro"
+          >
             <i class="bx bx-sun" id="theme-toggle-icon" aria-hidden="true"></i>
           </button>
         </div>
@@ -85,7 +117,8 @@
         <div class="home__data">
           <h1 class="home__title">
             <span data-i18n="home.greeting">Olá,</span><br />
-            <span data-i18n="home.intro">sou </span><span class="home__title-color">Lucas Emanoel</span><br />
+            <span data-i18n="home.intro">sou </span
+            ><span class="home__title-color">Lucas Emanoel</span><br />
             <span class="home__title-role">Dev Fullstack</span>
           </h1>
 
@@ -169,7 +202,9 @@
           </div>
 
           <div>
-            <h2 class="about__subtitle" data-i18n="about.subtitle">Eu sou Lucas</h2>
+            <h2 class="about__subtitle" data-i18n="about.subtitle">
+              Eu sou Lucas
+            </h2>
             <p class="about__text" data-i18n="about.text">
               Tecnólogo em Sistemas para Internet pelo IFRN, com foco em
               desenvolvimento backend e fullstack. Desenvolvo APIs REST com
@@ -196,25 +231,44 @@
               </h3>
               <span class="experience__period">2026</span>
             </div>
-            <p class="experience__company" data-i18n="experience.company">Mac Madeiras · Rio Grande do Norte</p>
-            <p class="experience__desc" data-i18n="experience.backendDescription">
+            <p class="experience__company" data-i18n="experience.company">
+              Mac Madeiras · Rio Grande do Norte
+            </p>
+            <p
+              class="experience__desc"
+              data-i18n="experience.backendDescription"
+            >
               Desenvolvi o MacNF, sistema de gestão de notas fiscais para uma
               rede de 3 lojas de materiais de construção, em produção com
               usuários reais e em processo de formalização como serviço pago.
             </p>
             <ul class="experience__list">
               <li>
-                <span data-i18n="experience.item1">API REST com Django REST Framework e autenticação por token</span>
+                <span data-i18n="experience.item1"
+                  >API REST com Django REST Framework e autenticação por
+                  token</span
+                >
               </li>
               <li>
-                <span data-i18n="experience.item2">Controle de acesso por perfis (estoquista, fiscal, compras)</span>
+                <span data-i18n="experience.item2"
+                  >Controle de acesso por perfis (estoquista, fiscal,
+                  compras)</span
+                >
               </li>
               <li>
-                <span data-i18n="experience.item3">Armazenamento seguro de PDFs no Cloudflare R2 com URLs assinadas</span>
+                <span data-i18n="experience.item3"
+                  >Armazenamento seguro de PDFs no Cloudflare R2 com URLs
+                  assinadas</span
+                >
               </li>
-              <li data-i18n="experience.item4">Deploy na Railway com PostgreSQL em produção</li>
+              <li data-i18n="experience.item4">
+                Deploy na Railway com PostgreSQL em produção
+              </li>
               <li>
-                <span data-i18n="experience.item5">Diagnóstico e correção de falhas em produção, análise de logs e suporte técnico aos usuários</span>
+                <span data-i18n="experience.item5"
+                  >Diagnóstico e correção de falhas em produção, análise de logs
+                  e suporte técnico aos usuários</span
+                >
               </li>
             </ul>
           </div>
@@ -224,9 +278,15 @@
               <h3 class="experience__role" data-i18n="experience.webRole">
                 Desenvolvimento de Software e Suporte Técnico
               </h3>
-              <span class="experience__period" data-i18n="experience.currentPeriod">2023 - atual</span>
+              <span
+                class="experience__period"
+                data-i18n="experience.currentPeriod"
+                >2023 - atual</span
+              >
             </div>
-            <p class="experience__company" data-i18n="experience.freelancer">Freelancer · Rio Grande do Norte</p>
+            <p class="experience__company" data-i18n="experience.freelancer">
+              Freelancer · Rio Grande do Norte
+            </p>
             <p class="experience__desc" data-i18n="experience.webDescription">
               Desenvolvimento de sistemas web e manutenção de computadores,
               prestando suporte técnico, instalação de softwares e diagnóstico
@@ -242,7 +302,9 @@
 
         <div class="skills__container bd-grid">
           <div>
-            <h2 class="skills__subtitle" data-i18n="skills.subtitle">Habilidades Técnicas</h2>
+            <h2 class="skills__subtitle" data-i18n="skills.subtitle">
+              Habilidades Técnicas
+            </h2>
             <p class="skills__text" data-i18n="skills.intro">
               Atuação fullstack: do modelo de dados e das APIs REST em Django ao
               frontend que consome essas APIs, passando por apps mobile e testes
@@ -330,7 +392,9 @@
             class="work__img"
             data-images="assets/img/macnf/login.png,assets/img/macnf/notas-list.png,assets/img/macnf/nota-create.png,assets/img/macnf/relatorio.png"
           >
-            <span class="work__badge" data-i18n="work.production">Em produção</span>
+            <span class="work__badge" data-i18n="work.production"
+              >Em produção</span
+            >
             <div class="work__thumb">
               <img
                 src="assets/img/macnf/login.png"
@@ -402,7 +466,11 @@
             class="work__img"
             data-images="assets/img/atuar/tela1.png,assets/img/atuar/tela2.png,assets/img/atuar/tela3.png,assets/img/atuar/tela4.png"
           >
-            <span class="work__badge work__badge--muted" data-i18n="work.archived">Arquivado</span>
+            <span
+              class="work__badge work__badge--muted"
+              data-i18n="work.archived"
+              >Arquivado</span
+            >
             <div class="work__thumb">
               <img
                 src="assets/img/work4.jpg"
@@ -426,7 +494,9 @@
             class="work__img work__img--portrait"
             data-images="assets/img/smart/login.jpg,assets/img/smart/home.jpg,assets/img/smart/alerts.jpg,assets/img/smart/profile.jpg,assets/img/smart/about.jpg,assets/img/smart/support.jpg"
           >
-            <span class="work__badge" data-i18n="work.award">TCC · nota máxima</span>
+            <span class="work__badge" data-i18n="work.award"
+              >TCC · nota máxima</span
+            >
             <div class="work__thumb">
               <img
                 src="assets/img/work5.jpg"
@@ -462,8 +532,18 @@
 
         <div class="contact__container bd-grid">
           <form action="" class="contact__form">
-            <input type="text" placeholder="Nome" data-i18n-placeholder="contact.name" class="contact__input" />
-            <input type="email" placeholder="E-mail" data-i18n-placeholder="contact.email" class="contact__input" />
+            <input
+              type="text"
+              placeholder="Nome"
+              data-i18n-placeholder="contact.name"
+              class="contact__input"
+            />
+            <input
+              type="email"
+              placeholder="E-mail"
+              data-i18n-placeholder="contact.email"
+              class="contact__input"
+            />
             <textarea
               rows="10"
               placeholder="Mensagem"
@@ -518,7 +598,10 @@
         </a>
       </div>
       <p class="footer__copy">
-        <span data-i18n="footer.copyright">&#169; 2026 Lucas Emanoel da Silva Freitas. Todos os direitos reservados.</span>
+        <span data-i18n="footer.copyright"
+          >&#169; 2026 Lucas Emanoel da Silva Freitas. Todos os direitos
+          reservados.</span
+        >
       </p>
     </footer>
 
