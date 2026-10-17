@@ -468,7 +468,7 @@ applyTheme(readPreference("portfolio-theme", "dark"));
 // endereço "https://formspree.io/f/xxxxxxxx" e cole abaixo. Enquanto o ID não
 // for trocado, o formulário abre o app de e-mail do visitante com a mensagem
 // pronta (mailto), então nunca fica "morto".
-const CONTACT_ENDPOINT = "https://formspree.io/f/SEU_ID";
+const CONTACT_ENDPOINT = "https://formspree.io/f/mqpenjqp";
 const CONTACT_EMAIL = "lucasedasilva30@gmail.com";
 
 const contactForm = document.getElementById("contact-form");
@@ -506,7 +506,7 @@ if (contactForm) {
     }
 
     // Sem endpoint configurado: abre o app de e-mail com tudo preenchido
-    if (CONTACT_ENDPOINT.includes("SEU_ID")) {
+    if (CONTACT_ENDPOINT.includes("https://formspree.io/f/mqpenjqp")) {
       const subject = encodeURIComponent(`Contato pelo portfólio - ${name}`);
       const body = encodeURIComponent(`${message}\n\n${name}\n${email}`);
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
