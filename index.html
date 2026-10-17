@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Lucas Emanoel - Desenvolvedor Fullstack especializado em Python, Django e Django REST Framework. Confira meus projetos e entre em contato."
+      content="Desenvolvedor Full Stack em Python, Django e Django REST Framework. Sistema de notas fiscais em produção em 3 lojas, apps React Native e testes automatizados. Confira os projetos."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Lucas Emanoel"
+    />
+    <meta
+      property="og:description"
+      content="APIs REST com Django/DRF, PostgreSQL, React Native e testes automatizados. Sistemas em produção."
     />
     <meta name="theme-color" content="#080808" />
 
@@ -123,6 +132,13 @@
           </h1>
 
           <a href="#contact" class="button" data-i18n="nav.contact">Contato</a>
+          <a
+            href="assets/docs/Lucas_Emanoel_Fullstack.pdf"
+            class="button"
+            download
+            data-i18n="home.resume"
+            >Currículo</a
+          >
         </div>
 
         <div class="home__social">
@@ -206,14 +222,16 @@
               Eu sou Lucas
             </h2>
             <p class="about__text" data-i18n="about.text">
-              Tecnólogo em Sistemas para Internet pelo IFRN, com foco em
-              desenvolvimento backend e fullstack. Desenvolvo APIs REST com
-              Django e Django REST Framework, banco de dados relacional com
-              PostgreSQL e deploys em produção na Railway. O MacNF - sistema de
-              gestão de notas fiscais que construí para a empresa onde trabalho
-              - está rodando com usuários reais e sendo formalizado como serviço
-              pago. Sou de Canguaretama, interior do RN, e resolvo problemas
-              reais com código.
+              Tecnólogo em Sistemas para Internet pelo IFRN (2026), com foco em
+              Python, Django e Django REST Framework. Atuo da modelagem de dados
+              e das APIs REST até a interface, incluindo autenticação, controle
+              de acesso por perfis e deploy em produção. O MacNF, sistema de
+              gestão de notas fiscais que construí para a Mac Madeiras, roda nas
+              3 lojas com 11+ usuários e 250+ notas por mês. Também desenvolvo
+              apps com React Native e planejo testes automatizados: meu TCC,
+              nota 100, validou um app IoT com 61 casos de teste. Sou de
+              Canguaretama, interior do RN, e resolvo problemas reais com
+              código.
             </p>
           </div>
         </div>
@@ -229,7 +247,9 @@
               <h3 class="experience__role" data-i18n="experience.backendRole">
                 Desenvolvedor Full Stack (Freelancer)
               </h3>
-              <span class="experience__period">2026</span>
+              <span class="experience__period" data-i18n="experience.macPeriod"
+                >jun. 2026 - atual</span
+              >
             </div>
             <p class="experience__company" data-i18n="experience.company">
               Mac Madeiras · Rio Grande do Norte
@@ -238,21 +258,28 @@
               class="experience__desc"
               data-i18n="experience.backendDescription"
             >
-              Desenvolvi o MacNF, sistema de gestão de notas fiscais para uma
-              rede de 3 lojas de materiais de construção, em produção com
-              usuários reais e em processo de formalização como serviço pago.
+              Substituí o controle de notas fiscais via WhatsApp por uma
+              plataforma única, o MacNF, em produção nas 3 lojas, com 11+
+              usuários e 250+ notas por mês.
             </p>
             <ul class="experience__list">
               <li>
                 <span data-i18n="experience.item1"
-                  >API REST com Django REST Framework e autenticação por
-                  token</span
+                  >API REST do zero com Django REST Framework e autenticação
+                  JWT</span
                 >
               </li>
               <li>
                 <span data-i18n="experience.item2"
-                  >Controle de acesso por perfis (estoquista, fiscal,
-                  compras)</span
+                  >Controle de acesso por 3 perfis (estoquista, fiscal, compras)
+                  e histórico de auditoria</span
+                >
+              </li>
+              <li>
+                <span data-i18n="experience.item6"
+                  >Validação automática de CNPJ e da chave de acesso da NF-e,
+                  incluindo o dígito verificador, que antes era feita à
+                  mão</span
                 >
               </li>
               <li>
@@ -266,8 +293,8 @@
               </li>
               <li>
                 <span data-i18n="experience.item5"
-                  >Diagnóstico e correção de falhas em produção, análise de logs
-                  e suporte técnico aos usuários</span
+                  >Monitoramento e manutenção contínuos em produção: análise de
+                  logs, correção de falhas e suporte aos usuários</span
                 >
               </li>
             </ul>
@@ -275,23 +302,29 @@
 
           <div class="experience__item">
             <div class="experience__header">
-              <h3 class="experience__role" data-i18n="experience.webRole">
-                Desenvolvimento de Software e Suporte Técnico
+              <h3 class="experience__role" data-i18n="experience.ifrnRole">
+                Desenvolvedor Backend
               </h3>
-              <span
-                class="experience__period"
-                data-i18n="experience.currentPeriod"
-                >2023 - atual</span
+              <span class="experience__period" data-i18n="experience.ifrnPeriod"
+                >jul. 2025 - jan. 2026</span
               >
             </div>
-            <p class="experience__company" data-i18n="experience.freelancer">
-              Freelancer · Rio Grande do Norte
+            <p class="experience__company" data-i18n="experience.ifrnCompany">
+              IFRN, Campus Canguaretama
             </p>
-            <p class="experience__desc" data-i18n="experience.webDescription">
-              Desenvolvimento de sistemas web e manutenção de computadores,
-              prestando suporte técnico, instalação de softwares e diagnóstico
-              de problemas.
+            <p class="experience__desc" data-i18n="experience.ifrnDescription">
+              Backend do Portfólio On-line e do Mural Web, em produção,
+              centralizando a divulgação de projetos e oportunidades do campus.
             </p>
+            <ul class="experience__list">
+              <li data-i18n="experience.ifrnItem1">
+                APIs REST em Django com CRUD completo e banco relacional
+              </li>
+              <li data-i18n="experience.ifrnItem2">
+                Login integrado ao SUAP (SSO institucional), sem cadastro
+                separado, com permissões por papéis
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -307,8 +340,8 @@
             </h2>
             <p class="skills__text" data-i18n="skills.intro">
               Atuação fullstack: do modelo de dados e das APIs REST em Django ao
-              frontend que consome essas APIs, passando por apps mobile e testes
-              automatizados.
+              frontend que consome essas APIs, passando por apps mobile, IoT e
+              testes automatizados.
             </p>
 
             <div class="skills__data">
@@ -325,7 +358,9 @@
             <div class="skills__data">
               <div class="skills__names">
                 <i class="bx bxl-html5 skills__icon"></i>
-                <span class="skills__name">HTML · CSS · JavaScript</span>
+                <span class="skills__name"
+                  >HTML · CSS · JavaScript · React</span
+                >
               </div>
               <p class="skills__detail" data-i18n="skills.frontend">
                 Interfaces responsivas integradas ao backend, do layout ao
@@ -336,7 +371,7 @@
             <div class="skills__data">
               <div class="skills__names">
                 <i class="bx bx-data skills__icon"></i>
-                <span class="skills__name">PostgreSQL / SQL</span>
+                <span class="skills__name">PostgreSQL · MySQL · SQL</span>
               </div>
               <p class="skills__detail" data-i18n="skills.database">
                 Modelagem relacional, queries e migrations aplicadas em sistema
@@ -363,6 +398,59 @@
               <p class="skills__detail" data-i18n="skills.git">
                 Versionamento e fluxo de branches em projetos profissionais e
                 acadêmicos
+              </p>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bx-test-tube skills__icon"></i>
+                <span class="skills__name">Pytest · Jest · Postman · TDD</span>
+              </div>
+              <p class="skills__detail" data-i18n="skills.testing">
+                Testes de unidade, integração e sistema; 61 casos de teste no
+                TCC, nota 100
+              </p>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bx-chip skills__icon"></i>
+                <span class="skills__name">ESP32 · Arduino · MQTT</span>
+              </div>
+              <p class="skills__detail" data-i18n="skills.iot">
+                Comunicação entre dispositivos e app mobile de monitoramento
+                hídrico
+              </p>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bx-shield-quarter skills__icon"></i>
+                <span class="skills__name">Segurança</span>
+              </div>
+              <p class="skills__detail" data-i18n="skills.security">
+                Criptografia, hashing e exercícios práticos de ataque e defesa
+              </p>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bx-terminal skills__icon"></i>
+                <span class="skills__name">Linux · Bash · Figma · Jira</span>
+              </div>
+              <p class="skills__detail" data-i18n="skills.tools">
+                Terminal e shell script, protótipos de interface e organização
+                de tarefas com Scrum e Kanban
+              </p>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-docker skills__icon"></i>
+                <span class="skills__name">Docker · AWS · CI/CD</span>
+              </div>
+              <p class="skills__detail" data-i18n="skills.learning">
+                Em aprendizado: contêineres, nuvem, Terraform e GitHub Actions
               </p>
             </div>
           </div>
@@ -406,7 +494,7 @@
               />
             </div>
             <p class="work__caption" data-i18n="work.macnfCaption">
-              Usado por usuários reais em múltiplas lojas · virando serviço pago
+              Em produção nas 3 lojas · 11+ usuários · 250+ notas por mês
             </p>
           </a>
 
@@ -507,7 +595,8 @@
               />
             </div>
             <p class="work__caption" data-i18n="work.smartCaption">
-              61 casos de teste em 14 suítes automatizadas
+              App de monitoramento hídrico via IoT · 61 casos de teste em 14
+              suítes (unidade, integração e sistema)
             </p>
           </a>
 
@@ -531,31 +620,54 @@
         <h2 class="section-title" data-i18n="nav.contact">Contato</h2>
 
         <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
+          <form id="contact-form" class="contact__form" novalidate>
             <input
               type="text"
+              name="name"
               placeholder="Nome"
               data-i18n-placeholder="contact.name"
               class="contact__input"
+              autocomplete="name"
+              required
             />
             <input
               type="email"
+              name="email"
               placeholder="E-mail"
               data-i18n-placeholder="contact.email"
               class="contact__input"
+              autocomplete="email"
+              required
             />
             <textarea
+              name="message"
               rows="10"
               placeholder="Mensagem"
               data-i18n-placeholder="contact.message"
               class="contact__input"
+              required
             ></textarea>
+            <!-- Campo anti-spam: humanos não veem nem preenchem -->
             <input
-              type="button"
+              type="text"
+              name="_gotcha"
+              class="contact__trap"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+            <input
+              type="submit"
               value="Enviar"
               data-i18n-value="contact.send"
               class="contact__button button"
             />
+            <p
+              class="contact__status"
+              id="contact-status"
+              role="status"
+              aria-live="polite"
+            ></p>
           </form>
         </div>
       </section>

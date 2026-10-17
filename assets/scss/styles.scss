@@ -251,7 +251,9 @@ img {
   min-width: 1.8rem;
   height: 1.8rem;
   border-radius: 0.2rem;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 
   &:hover,
   &.is-active {
@@ -265,7 +267,9 @@ img {
   height: 2rem;
   border-radius: 50%;
   font-size: 1.25rem;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 
   &:hover {
     color: var(--first-color-alt);
@@ -431,6 +435,10 @@ body.nav-open {
   &:hover {
     background-color: #005000;
     box-shadow: 0 8px 32px rgba(0, 100, 0, 0.35);
+  }
+
+  & + & {
+    margin-left: 0.75rem;
   }
 }
 
@@ -728,6 +736,39 @@ body.nav-open {
     font-family: var(--body-font);
     cursor: pointer;
     margin: 0 auto; // centralizado
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+  }
+
+  &__status {
+    margin-top: var(--mb-4);
+    text-align: center;
+    font-weight: var(--font-semi);
+    color: var(--text-dim);
+
+    &:empty {
+      display: none;
+    }
+
+    &[data-state="success"] {
+      color: var(--first-color-alt);
+    }
+
+    &[data-state="error"] {
+      color: #d9453d;
+    }
+  }
+
+  // Campo anti-spam (honeypot): fora da tela, invisível para pessoas
+  &__trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 }
 
@@ -791,6 +832,10 @@ body.nav-open {
       width: fit-content;
       margin-inline: auto;
       padding-inline: 1.75rem;
+
+      & + .button {
+        margin-top: 0.75rem;
+      }
     }
   }
 
