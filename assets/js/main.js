@@ -506,7 +506,7 @@ if (contactForm) {
     }
 
     // Sem endpoint configurado: abre o app de e-mail com tudo preenchido
-    if (CONTACT_ENDPOINT.includes("https://formspree.io/f/mqpenjqp")) {
+    if (CONTACT_ENDPOINT.includes("SEU_ID")) {
       const subject = encodeURIComponent(`Contato pelo portfólio - ${name}`);
       const body = encodeURIComponent(`${message}\n\n${name}\n${email}`);
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
