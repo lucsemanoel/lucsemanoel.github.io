@@ -140,6 +140,7 @@ const translations = {
   "nav.about": { "pt-BR": "Sobre", en: "About" },
   "nav.experience": { "pt-BR": "Experiência", en: "Experience" },
   "nav.skills": { "pt-BR": "Skills", en: "Skills" },
+  "nav.courses": { "pt-BR": "Cursos", en: "Courses" },
   "nav.work": { "pt-BR": "Projetos", en: "Projects" },
   "nav.contact": { "pt-BR": "Contato", en: "Contact" },
   "home.resume": { "pt-BR": "Currículo", en: "Resume" },
@@ -148,8 +149,8 @@ const translations = {
   "about.subtitle": { "pt-BR": "Eu sou Lucas", en: "I'm Lucas" },
   "about.text": {
     "pt-BR":
-      "Tecnólogo em Sistemas para Internet pelo IFRN (2026), com foco em Python, Django e Django REST Framework. Atuo da modelagem de dados e das APIs REST até a interface, incluindo autenticação, controle de acesso por perfis e deploy em produção. O MacNF, sistema de gestão de notas fiscais que construí para a Mac Madeiras, roda nas 3 lojas com 11+ usuários e 250+ notas por mês. Também desenvolvo apps com React Native e planejo testes automatizados: meu TCC, nota 100, validou um app IoT com 61 casos de teste. Sou de Canguaretama, interior do RN, e resolvo problemas reais com código.",
-    en: "I hold a degree in Internet Systems from IFRN (2026), focused on Python, Django and Django REST Framework. I work from data modeling and REST APIs through to the interface, including authentication, role-based access control and production deployment. MacNF, the invoice management system I built for Mac Madeiras, runs in all 3 stores with 11+ users and 250+ invoices per month. I also build React Native apps and plan automated tests: my capstone project, graded 100, validated an IoT app with 61 test cases. I'm from Canguaretama, in the countryside of Rio Grande do Norte, Brazil, and I solve real problems with code.",
+      "Tecnólogo em Sistemas para Internet pelo IFRN (2026), com foco em Python, Django e Django REST Framework. Atuo da modelagem de dados e das APIs REST até a interface, incluindo autenticação, controle de acesso por perfis e deploy em produção. O MacNF, sistema de gestão de notas fiscais que construí para a Mac Madeiras, roda nas 3 lojas com 11+ usuários e 250+ notas por mês. Também desenvolvo apps com React Native e planejo testes automatizados: meu TCC, nota 100, validou um app IoT com 61 casos de teste. Tenho ainda formação complementar em DevOps (Docker, AWS, Terraform e CI/CD).",
+    en: "I hold a degree in Internet Systems from IFRN (2026), focused on Python, Django and Django REST Framework. I work from data modeling and REST APIs through to the interface, including authentication, role-based access control and production deployment. MacNF, the invoice management system I built for Mac Madeiras, runs in all 3 stores with 11+ users and 250+ invoices per month. I also build React Native apps and plan automated tests: my capstone project, graded 100, validated an IoT app with 61 test cases. On top of that, I have additional training in DevOps (Docker, AWS, Terraform, and CI/CD).",
   },
   "experience.backendRole": {
     "pt-BR": "Desenvolvedor Full Stack (Freelancer)",
@@ -230,53 +231,68 @@ const translations = {
       "Atuação fullstack: do modelo de dados e das APIs REST em Django ao frontend que consome essas APIs, passando por apps mobile, IoT e testes automatizados.",
     en: "Full-stack work: from data models and Django REST APIs to the frontend that consumes them, plus mobile apps, IoT and automated testing.",
   },
-  "skills.python": {
+  "skills.backendTitle": { "pt-BR": "Backend e dados", en: "Backend and data" },
+  "skills.backend": {
     "pt-BR":
-      "APIs REST, autenticação por token/JWT, ORM e migrations, deploy em produção",
-    en: "REST APIs, token/JWT authentication, ORM and migrations, production deployments",
+      "APIs REST com autenticação JWT e controle de acesso por perfis, ORM e migrations, modelagem relacional em sistema real em produção",
+    en: "REST APIs with JWT authentication and role-based access control, ORM and migrations, relational modeling in a real production system",
+  },
+  "skills.frontendTitle": {
+    "pt-BR": "Front-end e mobile",
+    en: "Front-end and mobile",
   },
   "skills.frontend": {
     "pt-BR":
-      "Interfaces responsivas integradas ao backend, do layout ao consumo de API REST",
-    en: "Responsive interfaces integrated with backends, from layout through REST API consumption",
+      "Interfaces responsivas integradas ao backend e apps mobile com React Native e Expo",
+    en: "Responsive interfaces integrated with the backend and mobile apps with React Native and Expo",
   },
-  "skills.database": {
-    "pt-BR":
-      "Modelagem relacional, queries e migrations aplicadas em sistema real em produção",
-    en: "Relational modeling, queries, and migrations used in a real production system",
-  },
-  "skills.mobile": {
-    "pt-BR":
-      "Apps mobile e testes automatizados com Jest e React Native Testing Library",
-    en: "Mobile apps and automated tests with Jest and React Native Testing Library",
-  },
-  "skills.git": {
-    "pt-BR":
-      "Versionamento e fluxo de branches em projetos profissionais e acadêmicos",
-    en: "Version control and branch workflows across professional and academic projects",
-  },
+  "skills.testingTitle": { "pt-BR": "Testes", en: "Testing" },
   "skills.testing": {
     "pt-BR":
       "Testes de unidade, integração e sistema; 61 casos de teste no TCC, nota 100",
     en: "Unit, integration and system tests; 61 test cases in the capstone project, graded 100",
   },
-  "skills.iot": {
+  "skills.devopsTitle": { "pt-BR": "DevOps e cloud", en: "DevOps and cloud" },
+  "skills.devops": {
     "pt-BR":
-      "Comunicação entre dispositivos e app mobile de monitoramento hídrico",
-    en: "Device-to-app communication for a water monitoring mobile app",
+      "Contêineres, infraestrutura como código com Terraform, pipelines CI/CD com GitHub Actions e labs em AWS e Azure",
+    en: "Containers, infrastructure as code with Terraform, CI/CD pipelines with GitHub Actions, and labs on AWS and Azure",
   },
-  "skills.security": {
-    "pt-BR": "Criptografia, hashing e exercícios práticos de ataque e defesa",
-    en: "Cryptography, hashing and hands-on attack and defense exercises",
+  "skills.toolsTitle": {
+    "pt-BR": "Ferramentas, IoT e segurança",
+    en: "Tools, IoT and security",
   },
   "skills.tools": {
     "pt-BR":
-      "Terminal e shell script, protótipos de interface e organização de tarefas com Scrum e Kanban",
-    en: "Terminal and shell scripting, interface prototypes and task management with Scrum and Kanban",
+      "Versionamento, shell script, protótipos de interface, Scrum e Kanban; IoT com ESP32 e MQTT; criptografia e hashing",
+    en: "Version control, shell scripting, interface prototypes, Scrum and Kanban; IoT with ESP32 and MQTT; cryptography and hashing",
   },
-  "skills.learning": {
-    "pt-BR": "Em aprendizado: contêineres, nuvem, Terraform e GitHub Actions",
-    en: "Learning: containers, cloud, Terraform and GitHub Actions",
+  "courses.periodNov2026": { "pt-BR": "nov. 2026", en: "Nov 2026" },
+  "courses.periodMar2025": { "pt-BR": "mar. 2025", en: "Mar 2025" },
+  "courses.devopsMeta": {
+    "pt-BR": "Udemy · 14,5 horas",
+    en: "Udemy · 14.5 hours",
+  },
+  "courses.devopsDesc": {
+    "pt-BR":
+      "Terraform, Ansible, Docker, pipelines CI/CD com GitHub Actions, Kubernetes e labs práticos em AWS e Azure.",
+    en: "Terraform, Ansible, Docker, CI/CD pipelines with GitHub Actions, Kubernetes, and hands-on labs on AWS and Azure.",
+  },
+  "courses.djangoMeta": { "pt-BR": "Udemy · 79 horas", en: "Udemy · 79 hours" },
+  "courses.djangoDesc": {
+    "pt-BR":
+      "ORM, views (CBV e FBV), autenticação, JWT, ViewSets, testes automatizados (Pytest, Selenium, TDD) e deploy em servidor.",
+    en: "ORM, class- and function-based views, authentication, JWT, ViewSets, automated testing (Pytest, Selenium, TDD), and server deployment.",
+  },
+  "courses.jsMeta": { "pt-BR": "Udemy · 146 horas", en: "Udemy · 146 hours" },
+  "courses.jsDesc": {
+    "pt-BR":
+      "JavaScript e TypeScript do básico ao avançado: Node.js, Express, APIs REST com JWT, MySQL e MongoDB, React e Redux, testes com Jest, SOLID, Next.js e deploy em servidor Linux.",
+    en: "JavaScript and TypeScript from basic to advanced: Node.js, Express, REST APIs with JWT, MySQL and MongoDB, React and Redux, testing with Jest, SOLID, Next.js, and Linux server deployment.",
+  },
+  "courses.certificate": {
+    "pt-BR": "Ver certificado",
+    en: "View certificate",
   },
   "work.production": { "pt-BR": "Em produção", en: "In production" },
   "work.macnfAlt": {

@@ -290,7 +290,7 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .nav__logo {
     max-width: calc(100vw - 11rem);
   }
@@ -339,7 +339,7 @@ body.nav-open {
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .nav__overlay {
     display: none;
   }
@@ -532,6 +532,36 @@ body.nav-open {
   }
 }
 
+/*===== CURSOS E CERTIFICADOS =====*/
+.courses {
+  &__container {
+    row-gap: 1.5rem;
+  }
+
+  // Reaproveita os estilos de card do .experience__item (definidos acima)
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.35rem;
+    margin-top: auto; // mantém o link alinhado no rodapé do card
+    padding-top: 0.75rem;
+    color: var(--first-color-alt);
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+}
+
 /*===== HABILIDADES =====*/
 .skills {
   &__container {
@@ -573,7 +603,17 @@ body.nav-open {
   }
 
   &__name {
+    display: block;
     color: var(--text-color);
+  }
+
+  &__stack {
+    display: block;
+    margin-top: 0.1rem;
+    color: var(--first-color-alt);
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi);
+    line-height: 1.4;
   }
 
   &__detail {
@@ -937,34 +977,6 @@ body.nav-open {
     }
   }
 
-  .nav {
-    height: calc(var(--header-height) + 1.5rem);
-
-    &__list {
-      display: flex;
-      padding-top: 0;
-    }
-    &__item {
-      margin-left: var(--mb-6);
-      margin-bottom: 0;
-    }
-    &__toggle {
-      display: none;
-    }
-    &__link {
-      color: var(--nav-text-color);
-    }
-  }
-
-  .nav__menu {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    background: none;
-    border: none;
-  }
-
   .home {
     padding: 8rem 0 2rem;
     &__data {
@@ -998,6 +1010,11 @@ body.nav-open {
     column-gap: 2rem;
   }
 
+  .courses__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+  }
+
   .work__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
@@ -1005,9 +1022,43 @@ body.nav-open {
 }
 
 @media screen and (min-width: 992px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+
+    &__list {
+      display: flex;
+      padding-top: 0;
+    }
+    &__item {
+      margin-left: 1.5rem;
+      margin-bottom: 0;
+    }
+    &__toggle {
+      display: none;
+    }
+    &__link {
+      color: var(--nav-text-color);
+    }
+  }
+
+  .nav__menu {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+
+  .nav__settings {
+    flex-shrink: 0;
+    margin-left: var(--mb-4);
+    margin-right: 0;
+  }
+
   .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: max(var(--mb-2), calc((100% - 1024px) / 2));
+    margin-right: max(var(--mb-2), calc((100% - 1024px) / 2));
   }
 
   .home {

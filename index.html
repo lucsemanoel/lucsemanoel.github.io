@@ -8,14 +8,14 @@
       content="Desenvolvedor Full Stack em Python, Django e Django REST Framework. Sistema de notas fiscais em produção em 3 lojas, apps React Native e testes automatizados. Confira os projetos."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Lucas Emanoel"
-    />
+    <meta property="og:title" content="Lucas Emanoel" />
     <meta
       property="og:description"
       content="APIs REST com Django/DRF, PostgreSQL, React Native e testes automatizados. Sistemas em produção."
     />
+    <meta property="og:url" content="https://lucsemanoel.github.io/" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="canonical" href="https://lucsemanoel.github.io/" />
     <meta name="theme-color" content="#080808" />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -57,6 +57,11 @@
             <li class="nav__item">
               <a href="#skills" class="nav__link" data-i18n="nav.skills"
                 >Skills</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#courses" class="nav__link" data-i18n="nav.courses"
+                >Cursos</a
               >
             </li>
             <li class="nav__item">
@@ -229,9 +234,8 @@
               gestão de notas fiscais que construí para a Mac Madeiras, roda nas
               3 lojas com 11+ usuários e 250+ notas por mês. Também desenvolvo
               apps com React Native e planejo testes automatizados: meu TCC,
-              nota 100, validou um app IoT com 61 casos de teste. Sou de
-              Canguaretama, interior do RN, e resolvo problemas reais com
-              código.
+              nota 100, validou um app IoT com 61 casos de teste. Tenho ainda
+              formação complementar em DevOps (Docker, AWS, Terraform e CI/CD).
             </p>
           </div>
         </div>
@@ -347,64 +351,52 @@
             <div class="skills__data">
               <div class="skills__names">
                 <i class="bx bxl-python skills__icon"></i>
-                <span class="skills__name">Python · Django · DRF</span>
+                <div>
+                  <span class="skills__name" data-i18n="skills.backendTitle"
+                    >Backend e dados</span
+                  >
+                  <span class="skills__stack"
+                    >Python · Django · DRF · Node.js · PostgreSQL · MySQL</span
+                  >
+                </div>
               </div>
-              <p class="skills__detail" data-i18n="skills.python">
-                APIs REST, autenticação por token/JWT, ORM e migrations, deploy
-                em produção
-              </p>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-html5 skills__icon"></i>
-                <span class="skills__name"
-                  >HTML · CSS · JavaScript · React</span
-                >
-              </div>
-              <p class="skills__detail" data-i18n="skills.frontend">
-                Interfaces responsivas integradas ao backend, do layout ao
-                consumo de API REST
-              </p>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-data skills__icon"></i>
-                <span class="skills__name">PostgreSQL · MySQL · SQL</span>
-              </div>
-              <p class="skills__detail" data-i18n="skills.database">
-                Modelagem relacional, queries e migrations aplicadas em sistema
-                real em produção
+              <p class="skills__detail" data-i18n="skills.backend">
+                APIs REST com autenticação JWT e controle de acesso por perfis,
+                ORM e migrations, modelagem relacional em sistema real em
+                produção
               </p>
             </div>
 
             <div class="skills__data">
               <div class="skills__names">
                 <i class="bx bxl-react skills__icon"></i>
-                <span class="skills__name">React Native · TypeScript</span>
+                <div>
+                  <span class="skills__name" data-i18n="skills.frontendTitle"
+                    >Front-end e mobile</span
+                  >
+                  <span class="skills__stack"
+                    >HTML · CSS · JavaScript · TypeScript · React · React
+                    Native</span
+                  >
+                </div>
               </div>
-              <p class="skills__detail" data-i18n="skills.mobile">
-                Apps mobile e testes automatizados com Jest e React Native
-                Testing Library
-              </p>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-git skills__icon"></i>
-                <span class="skills__name">Git / GitHub</span>
-              </div>
-              <p class="skills__detail" data-i18n="skills.git">
-                Versionamento e fluxo de branches em projetos profissionais e
-                acadêmicos
+              <p class="skills__detail" data-i18n="skills.frontend">
+                Interfaces responsivas integradas ao backend e apps mobile com
+                React Native e Expo
               </p>
             </div>
 
             <div class="skills__data">
               <div class="skills__names">
                 <i class="bx bx-test-tube skills__icon"></i>
-                <span class="skills__name">Pytest · Jest · Postman · TDD</span>
+                <div>
+                  <span class="skills__name" data-i18n="skills.testingTitle"
+                    >Testes</span
+                  >
+                  <span class="skills__stack"
+                    >Pytest · Jest · RNTL · Postman · TDD</span
+                  >
+                </div>
               </div>
               <p class="skills__detail" data-i18n="skills.testing">
                 Testes de unidade, integração e sistema; 61 casos de teste no
@@ -414,43 +406,37 @@
 
             <div class="skills__data">
               <div class="skills__names">
-                <i class="bx bx-chip skills__icon"></i>
-                <span class="skills__name">ESP32 · Arduino · MQTT</span>
+                <i class="bx bxl-docker skills__icon"></i>
+                <div>
+                  <span class="skills__name" data-i18n="skills.devopsTitle"
+                    >DevOps e cloud</span
+                  >
+                  <span class="skills__stack"
+                    >Docker · Terraform · GitHub Actions · AWS</span
+                  >
+                </div>
               </div>
-              <p class="skills__detail" data-i18n="skills.iot">
-                Comunicação entre dispositivos e app mobile de monitoramento
-                hídrico
-              </p>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-shield-quarter skills__icon"></i>
-                <span class="skills__name">Segurança</span>
-              </div>
-              <p class="skills__detail" data-i18n="skills.security">
-                Criptografia, hashing e exercícios práticos de ataque e defesa
+              <p class="skills__detail" data-i18n="skills.devops">
+                Contêineres, infraestrutura como código com Terraform, pipelines
+                CI/CD com GitHub Actions e labs em AWS e Azure
               </p>
             </div>
 
             <div class="skills__data">
               <div class="skills__names">
                 <i class="bx bx-terminal skills__icon"></i>
-                <span class="skills__name">Linux · Bash · Figma · Jira</span>
+                <div>
+                  <span class="skills__name" data-i18n="skills.toolsTitle"
+                    >Ferramentas, IoT e segurança</span
+                  >
+                  <span class="skills__stack"
+                    >Git · Linux · Figma · Jira · ESP32 · MQTT</span
+                  >
+                </div>
               </div>
               <p class="skills__detail" data-i18n="skills.tools">
-                Terminal e shell script, protótipos de interface e organização
-                de tarefas com Scrum e Kanban
-              </p>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-docker skills__icon"></i>
-                <span class="skills__name">Docker · AWS · CI/CD</span>
-              </div>
-              <p class="skills__detail" data-i18n="skills.learning">
-                Em aprendizado: contêineres, nuvem, Terraform e GitHub Actions
+                Versionamento, shell script, protótipos de interface, Scrum e
+                Kanban; IoT com ESP32 e MQTT; criptografia e hashing
               </p>
             </div>
           </div>
@@ -463,6 +449,93 @@
               loading="lazy"
               decoding="async"
             />
+          </div>
+        </div>
+      </section>
+
+      <!--===== CURSOS E CERTIFICADOS =====-->
+      <section class="courses section" id="courses">
+        <h2 class="section-title" data-i18n="nav.courses">Cursos</h2>
+
+        <div class="courses__container bd-grid">
+          <div class="experience__item courses__item">
+            <div class="experience__header">
+              <h3 class="experience__role">DevOps: Automação sem Enrolação</h3>
+              <span class="experience__period" data-i18n="courses.periodNov2026"
+                >nov. 2026</span
+              >
+            </div>
+            <p class="experience__company" data-i18n="courses.devopsMeta">
+              Udemy · 14,5 horas
+            </p>
+            <p class="experience__desc" data-i18n="courses.devopsDesc">
+              Terraform, Ansible, Docker, pipelines CI/CD com GitHub Actions,
+              Kubernetes e labs práticos em AWS e Azure.
+            </p>
+            <a
+              href="https://ude.my/UC-64b2c7a3-d01e-42fd-9186-762a3f577a12"
+              class="courses__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span data-i18n="courses.certificate">Ver certificado</span>
+              <i class="bx bx-link-external" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="experience__item courses__item">
+            <div class="experience__header">
+              <h3 class="experience__role">
+                Django Web Framework e Django REST Framework (DRF)
+              </h3>
+              <span class="experience__period" data-i18n="courses.periodMar2025"
+                >mar. 2025</span
+              >
+            </div>
+            <p class="experience__company" data-i18n="courses.djangoMeta">
+              Udemy · 79 horas
+            </p>
+            <p class="experience__desc" data-i18n="courses.djangoDesc">
+              ORM, views (CBV e FBV), autenticação, JWT, ViewSets, testes
+              automatizados (Pytest, Selenium, TDD) e deploy em servidor.
+            </p>
+            <a
+              href="https://ude.my/UC-89e98e94-3f6c-4641-865f-f9f080f2d459"
+              class="courses__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span data-i18n="courses.certificate">Ver certificado</span>
+              <i class="bx bx-link-external" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="experience__item courses__item">
+            <div class="experience__header">
+              <h3 class="experience__role">
+                JavaScript e TypeScript do básico ao avançado - JS + TS
+              </h3>
+              <span class="experience__period" data-i18n="courses.periodMar2025"
+                >mar. 2025</span
+              >
+            </div>
+            <p class="experience__company" data-i18n="courses.jsMeta">
+              Udemy · 146 horas
+            </p>
+            <p class="experience__desc" data-i18n="courses.jsDesc">
+              JavaScript e TypeScript do básico ao avançado: Node.js, Express,
+              APIs REST com JWT, MySQL e MongoDB, React e Redux, testes com
+              Jest, SOLID, Next.js e deploy em servidor Linux.
+            </p>
+            <a
+              href="https://ude.my/UC-8746f486-5f8c-4464-8b81-f4376458f160"
+              class="courses__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span data-i18n="courses.certificate">Ver certificado</span>
+              <i class="bx bx-link-external" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </section>
@@ -504,11 +577,11 @@
             target="_blank"
             rel="noopener noreferrer"
             class="work__img"
-            data-images="assets/img/to do/login.png,assets/img/to do/registro.png,assets/img/to do/tela_inicial.png,assets/img/to do/tela_inicial_com_tarefa.png,assets/img/to do/cadastrar_tarefa.png,assets/img/to do/perfil.png"
+            data-images="assets/img/todo/login.png,assets/img/todo/registro.png,assets/img/todo/tela_inicial.png,assets/img/todo/tela_inicial_com_tarefa.png,assets/img/todo/cadastrar_tarefa.png,assets/img/todo/perfil.png"
           >
             <div class="work__thumb">
               <img
-                src="assets/img/to do/login.png"
+                src="assets/img/todo/login.png"
                 alt="To-Do List - Gerenciamento de tarefas com Django"
                 data-i18n-alt="work.todoAlt"
                 loading="eager"

@@ -265,7 +265,7 @@ img {
   background-color: var(--first-color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .nav__logo {
     max-width: calc(100vw - 11rem);
   }
@@ -311,7 +311,7 @@ body.nav-open {
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .nav__overlay {
     display: none;
   }
@@ -473,6 +473,30 @@ body.nav-open {
   color: var(--first-color-alt);
 }
 
+/*===== CURSOS E CERTIFICADOS =====*/
+.courses__container {
+  row-gap: 1.5rem;
+}
+.courses__item {
+  display: flex;
+  flex-direction: column;
+}
+.courses__link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  color: var(--first-color-alt);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi);
+  transition: color 0.2s;
+}
+.courses__link:hover {
+  color: var(--text-color);
+}
+
 /*===== HABILIDADES =====*/
 .skills__container {
   row-gap: 2rem;
@@ -507,7 +531,16 @@ body.nav-open {
   margin-bottom: 0.5rem;
 }
 .skills__name {
+  display: block;
   color: var(--text-color);
+}
+.skills__stack {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--first-color-alt);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi);
+  line-height: 1.4;
 }
 .skills__detail {
   color: var(--text-dim);
@@ -816,31 +849,6 @@ body.nav-open {
     width: 80px;
     top: 3rem;
   }
-  .nav {
-    height: calc(var(--header-height) + 1.5rem);
-  }
-  .nav__list {
-    display: flex;
-    padding-top: 0;
-  }
-  .nav__item {
-    margin-left: var(--mb-6);
-    margin-bottom: 0;
-  }
-  .nav__toggle {
-    display: none;
-  }
-  .nav__link {
-    color: var(--nav-text-color);
-  }
-  .nav__menu {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    background: none;
-    border: none;
-  }
   .home {
     padding: 8rem 0 2rem;
   }
@@ -865,15 +873,49 @@ body.nav-open {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
+  .courses__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+  }
   .work__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__list {
+    display: flex;
+    padding-top: 0;
+  }
+  .nav__item {
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__link {
+    color: var(--nav-text-color);
+  }
+  .nav__menu {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+  .nav__settings {
+    flex-shrink: 0;
+    margin-left: var(--mb-4);
+    margin-right: 0;
+  }
   .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: max(var(--mb-2), calc((100% - 1024px) / 2));
+    margin-right: max(var(--mb-2), calc((100% - 1024px) / 2));
   }
   .home {
     padding: 10rem 0 2rem;
